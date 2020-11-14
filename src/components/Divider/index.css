@@ -1,0 +1,10 @@
+.divider {
+  background: #e5e5e5;
+  border: none;
+}
+.divider--thickness-regular {
+  height: 2px;
+}
+.divider--thickness-thin {
+  height: 1px;
+}
