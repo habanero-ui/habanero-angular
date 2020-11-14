@@ -7,7 +7,22 @@ import { Component, Input } from '@angular/core'
 })
 export default class TextComponent {
   @Input()
-  color: 'thin' | 'regular' = 'regular'
+  color:
+    | 'black'
+    | 'blue'
+    | 'border'
+    | 'error'
+    | 'gold'
+    | 'green'
+    | 'info'
+    | 'none'
+    | 'offwhite'
+    | 'orange'
+    | 'pink'
+    | 'purple'
+    | 'subtle'
+    | 'success'
+    | 'warning' = 'black'
 
   @Input()
   colorIsBackground: Boolean = false
@@ -16,7 +31,19 @@ export default class TextComponent {
   text = 'The quick brown fox jumps over the lazy dog'
 
   @Input()
-  variant: 'thin' | 'regular' = 'regular'
+  variant:
+    | 'body-extra-small'
+    | 'body-large'
+    | 'body-small'
+    | 'button'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'label-large'
+    | 'label-small' = 'body-large'
 
   public get classes(): string[] {
     return [
