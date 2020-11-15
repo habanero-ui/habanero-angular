@@ -1,0 +1,147 @@
+.text {
+  font-family: inter, sans-serif;
+  transition: color 200ms ease;
+}
+.text--color-gold {
+  color: #c09e6b;
+}
+.text--color-gold.text--color-is-background {
+  color: #ffffff;
+}
+.text--color-black {
+  color: #3e3b3e;
+}
+.text--color-black.text--color-is-background {
+  color: #ffffff;
+}
+.text--color-blue {
+  color: #a6eff5;
+}
+.text--color-blue.text--color-is-background {
+  color: #3e3b3e;
+}
+.text--color-border {
+  color: #e5e5e5;
+}
+.text--color-border.text--color-is-background {
+  color: #3e3b3e;
+}
+.text--color-green {
+  color: #97ecc2;
+}
+.text--color-green.text--color-is-background {
+  color: #3e3b3e;
+}
+.text--color-orange {
+  color: #fcb68a;
+}
+.text--color-orange.text--color-is-background {
+  color: #3e3b3e;
+}
+.text--color-pink {
+  color: #fab5d3;
+}
+.text--color-pink.text--color-is-background {
+  color: #3e3b3e;
+}
+.text--color-purple {
+  color: #b6a4ff;
+}
+.text--color-purple.text--color-is-background {
+  color: #3e3b3e;
+}
+.text--color-error {
+  color: #da1e28;
+}
+.text--color-error.text--color-is-background {
+  color: #ffffff;
+}
+.text--color-info {
+  color: #3c6eea;
+}
+.text--color-info.text--color-is-background {
+  color: #ffffff;
+}
+.text--color-offwhite {
+  color: #f8f9fa;
+}
+.text--color-offwhite.text--color-is-background {
+  color: #3e3b3e;
+}
+.text--color-subtle {
+  color: #7c7c86;
+}
+.text--color-subtle.text--color-is-background {
+  color: #ffffff;
+}
+.text--color-success {
+  color: #3aa76d;
+}
+.text--color-success.text--color-is-background {
+  color: #ffffff;
+}
+.text--color-warning {
+  color: #f1b34d;
+}
+.text--color-warning.text--color-is-background {
+  color: #3e3b3e;
+}
+.text--variant-body-extra-small {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+.text--variant-body-large {
+  font-size: 1rem;
+  line-height: 1.188rem;
+}
+.text--variant-body-small {
+  font-size: 0.875rem;
+  line-height: 1.06rem;
+}
+.text--variant-button {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+.text--variant-button:hover {
+  text-decoration: underline;
+}
+.text--variant-h1 {
+  font-size: 6.875rem;
+  font-weight: 500;
+  line-height: 8.25rem;
+}
+.text--variant-h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 4.19rem;
+}
+.text--variant-h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.625rem;
+}
+.text--variant-h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.375rem;
+}
+.text--variant-h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+.text--variant-h6 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.text--variant-label-large {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.188rem;
+}
+.text--variant-label-small {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 0.875rem;
+}
