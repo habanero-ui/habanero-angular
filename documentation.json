@@ -105,6 +105,77 @@
                     }
                 }
             }
+        },
+        {
+            "name": "TextComponent",
+            "id": "component-TextComponent-0837f12993bc2a147c4048e0596b4969",
+            "file": "src/components/Text/index.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "text",
+            "styleUrls": [
+                "./index.css"
+            ],
+            "styles": [],
+            "template": "<span [ngClass]=\"classes\">{{ text }}</span>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'black'",
+                    "line": 10,
+                    "type": "\"black\" | \"blue\" | \"border\" | \"error\" | \"gold\" | \"green\" | \"info\" | \"none\" | \"offwhite\" | \"orange\" | \"pink\" | \"purple\" | \"subtle\" | \"success\" | \"warning\""
+                },
+                {
+                    "name": "colorIsBackground",
+                    "defaultValue": "false",
+                    "line": 28,
+                    "type": "Boolean"
+                },
+                {
+                    "name": "text",
+                    "defaultValue": "'The quick brown fox jumps over the lazy dog'",
+                    "line": 31
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "'body-large'",
+                    "line": 34,
+                    "type": "\"body-extra-small\" | \"body-large\" | \"body-small\" | \"button\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"label-large\" | \"label-small\""
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core'\n\n@Component({\n  selector: 'text',\n  template: `<span [ngClass]=\"classes\">{{ text }}</span>`,\n  styleUrls: ['./index.css'],\n})\nexport default class TextComponent {\n  @Input()\n  color:\n    | 'black'\n    | 'blue'\n    | 'border'\n    | 'error'\n    | 'gold'\n    | 'green'\n    | 'info'\n    | 'none'\n    | 'offwhite'\n    | 'orange'\n    | 'pink'\n    | 'purple'\n    | 'subtle'\n    | 'success'\n    | 'warning' = 'black'\n\n  @Input()\n  colorIsBackground: Boolean = false\n\n  @Input()\n  text = 'The quick brown fox jumps over the lazy dog'\n\n  @Input()\n  variant:\n    | 'body-extra-small'\n    | 'body-large'\n    | 'body-small'\n    | 'button'\n    | 'h1'\n    | 'h2'\n    | 'h3'\n    | 'h4'\n    | 'h5'\n    | 'h6'\n    | 'label-large'\n    | 'label-small' = 'body-large'\n\n  public get classes(): string[] {\n    return [\n      'text',\n      this.colorIsBackground ? 'text--color-is-background' : '',\n      `text--color-${this.color}`,\n      `text--variant-${this.variant}`,\n    ]\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".text {\n  font-family: inter, sans-serif;\n  transition: color 200ms ease;\n}\n.text--color-gold {\n  color: #c09e6b;\n}\n.text--color-gold.text--color-is-background {\n  color: #ffffff;\n}\n.text--color-black {\n  color: #3e3b3e;\n}\n.text--color-black.text--color-is-background {\n  color: #ffffff;\n}\n.text--color-blue {\n  color: #a6eff5;\n}\n.text--color-blue.text--color-is-background {\n  color: #3e3b3e;\n}\n.text--color-border {\n  color: #e5e5e5;\n}\n.text--color-border.text--color-is-background {\n  color: #3e3b3e;\n}\n.text--color-green {\n  color: #97ecc2;\n}\n.text--color-green.text--color-is-background {\n  color: #3e3b3e;\n}\n.text--color-orange {\n  color: #fcb68a;\n}\n.text--color-orange.text--color-is-background {\n  color: #3e3b3e;\n}\n.text--color-pink {\n  color: #fab5d3;\n}\n.text--color-pink.text--color-is-background {\n  color: #3e3b3e;\n}\n.text--color-purple {\n  color: #b6a4ff;\n}\n.text--color-purple.text--color-is-background {\n  color: #3e3b3e;\n}\n.text--color-error {\n  color: #da1e28;\n}\n.text--color-error.text--color-is-background {\n  color: #ffffff;\n}\n.text--color-info {\n  color: #3c6eea;\n}\n.text--color-info.text--color-is-background {\n  color: #ffffff;\n}\n.text--color-offwhite {\n  color: #f8f9fa;\n}\n.text--color-offwhite.text--color-is-background {\n  color: #3e3b3e;\n}\n.text--color-subtle {\n  color: #7c7c86;\n}\n.text--color-subtle.text--color-is-background {\n  color: #ffffff;\n}\n.text--color-success {\n  color: #3aa76d;\n}\n.text--color-success.text--color-is-background {\n  color: #ffffff;\n}\n.text--color-warning {\n  color: #f1b34d;\n}\n.text--color-warning.text--color-is-background {\n  color: #3e3b3e;\n}\n.text--variant-body-extra-small {\n  font-size: 0.75rem;\n  line-height: 0.875rem;\n}\n.text--variant-body-large {\n  font-size: 1rem;\n  line-height: 1.188rem;\n}\n.text--variant-body-small {\n  font-size: 0.875rem;\n  line-height: 1.06rem;\n}\n.text--variant-button {\n  font-size: 1rem;\n  font-weight: 500;\n  line-height: 1rem;\n}\n.text--variant-button:hover {\n  text-decoration: underline;\n}\n.text--variant-h1 {\n  font-size: 6.875rem;\n  font-weight: 500;\n  line-height: 8.25rem;\n}\n.text--variant-h2 {\n  font-size: 3.5rem;\n  font-weight: 500;\n  line-height: 4.19rem;\n}\n.text--variant-h3 {\n  font-size: 3rem;\n  font-weight: 500;\n  line-height: 3.625rem;\n}\n.text--variant-h4 {\n  font-size: 2rem;\n  font-weight: 500;\n  line-height: 2.375rem;\n}\n.text--variant-h5 {\n  font-size: 1.5rem;\n  font-weight: 500;\n  line-height: 1.625rem;\n}\n.text--variant-h6 {\n  font-size: 1.25rem;\n  line-height: 1.5rem;\n}\n.text--variant-label-large {\n  font-size: 1rem;\n  font-weight: 500;\n  line-height: 1.188rem;\n}\n.text--variant-label-small {\n  font-size: 0.75rem;\n  font-weight: 500;\n  line-height: 0.875rem;\n}\n",
+                    "styleUrl": "./index.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 48
+                    }
+                }
+            }
         }
     ],
     "modules": [
@@ -157,6 +228,14 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/components/Text/__stories__/Text.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -179,6 +258,14 @@
                 "file": "src/components/Divider/__stories__/Divider.stories.ts",
                 "type": "Story<Divider>",
                 "defaultValue": "(args: Divider) => ({\n  component: Divider,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/components/Text/__stories__/Text.stories.ts",
+                "type": "Story<Text>",
+                "defaultValue": "(args: Text) => ({\n  component: Text,\n  props: args,\n})"
             }
         ],
         "functions": [],
@@ -201,6 +288,24 @@
                     "file": "src/components/Divider/__stories__/Divider.stories.ts",
                     "type": "Story<Divider>",
                     "defaultValue": "(args: Divider) => ({\n  component: Divider,\n  props: args,\n})"
+                }
+            ],
+            "src/components/Text/__stories__/Text.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/components/Text/__stories__/Text.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/components/Text/__stories__/Text.stories.ts",
+                    "type": "Story<Text>",
+                    "defaultValue": "(args: Text) => ({\n  component: Text,\n  props: args,\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -269,6 +374,35 @@
                 "name": "DividerComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/Text/__stories__/Text.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/Text/__stories__/Text.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/Text/index.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TextComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
