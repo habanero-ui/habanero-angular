@@ -89,6 +89,46 @@
           }
         }
       }
+    },
+    "ng-habanero": {
+      "projectType": "library",
+      "root": "projects/ng-habanero",
+      "sourceRoot": "projects/ng-habanero/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ng-habanero/tsconfig.lib.json",
+            "project": "projects/ng-habanero/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-habanero/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-habanero/src/test.ts",
+            "tsConfig": "projects/ng-habanero/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-habanero/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-habanero/tsconfig.lib.json",
+              "projects/ng-habanero/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "habanero-angular",
