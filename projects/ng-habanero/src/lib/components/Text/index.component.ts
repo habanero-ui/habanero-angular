@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'text',
+  selector: 'hb-text',
   template: `<span [ngClass]="classes">{{ text }}</span>`,
   styleUrls: ['./index.css'],
 })
-export default class TextComponent {
+export class TextComponent {
   @Input()
   color:
     | 'black'
@@ -22,13 +22,13 @@ export default class TextComponent {
     | 'purple'
     | 'subtle'
     | 'success'
-    | 'warning' = 'black'
+    | 'warning' = 'black';
 
   @Input()
-  colorIsBackground: Boolean = false
+  colorIsBackground: Boolean = false;
 
   @Input()
-  text = 'The quick brown fox jumps over the lazy dog'
+  text = 'The quick brown fox jumps over the lazy dog';
 
   @Input()
   variant:
@@ -43,7 +43,7 @@ export default class TextComponent {
     | 'h5'
     | 'h6'
     | 'label-large'
-    | 'label-small' = 'body-large'
+    | 'label-small' = 'body-large';
 
   public get classes(): string[] {
     return [
@@ -51,6 +51,6 @@ export default class TextComponent {
       this.colorIsBackground ? 'text--color-is-background' : '',
       `text--color-${this.color}`,
       `text--variant-${this.variant}`,
-    ]
+    ];
   }
 }

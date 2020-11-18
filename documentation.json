@@ -54,14 +54,14 @@
         },
         {
             "name": "DividerComponent",
-            "id": "component-DividerComponent-37104f30e21f6ed95ace9943fc7d831f",
-            "file": "src/components/Divider/index.component.ts",
+            "id": "component-DividerComponent-7984190baef7ae73ddbeea5b16268eb7",
+            "file": "projects/ng-habanero/src/lib/components/Divider/index.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "divider",
+            "selector": "hb-divider",
             "styleUrls": [
                 "./index.css"
             ],
@@ -85,7 +85,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core'\n\n@Component({\n  selector: 'divider',\n  template: `<hr [ngClass]=\"classes\" />`,\n  styleUrls: ['./index.css'],\n})\nexport default class DividerComponent {\n  @Input()\n  thickness: 'thin' | 'regular' = 'regular'\n\n  public get classes(): string[] {\n    return ['divider', `divider--thickness-${this.thickness}`]\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'hb-divider',\n  template: `<hr [ngClass]=\"classes\" />`,\n  styleUrls: ['./index.css'],\n})\nexport class DividerComponent {\n  @Input()\n  thickness: 'thin' | 'regular' = 'regular';\n\n  public get classes(): string[] {\n    return ['divider', `divider--thickness-${this.thickness}`];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -108,14 +108,14 @@
         },
         {
             "name": "TextComponent",
-            "id": "component-TextComponent-0837f12993bc2a147c4048e0596b4969",
-            "file": "src/components/Text/index.component.ts",
+            "id": "component-TextComponent-907a2f78df8c17e39d6700a3821979a5",
+            "file": "projects/ng-habanero/src/lib/components/Text/index.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "text",
+            "selector": "hb-text",
             "styleUrls": [
                 "./index.css"
             ],
@@ -156,7 +156,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core'\n\n@Component({\n  selector: 'text',\n  template: `<span [ngClass]=\"classes\">{{ text }}</span>`,\n  styleUrls: ['./index.css'],\n})\nexport default class TextComponent {\n  @Input()\n  color:\n    | 'black'\n    | 'blue'\n    | 'border'\n    | 'error'\n    | 'gold'\n    | 'green'\n    | 'info'\n    | 'none'\n    | 'offwhite'\n    | 'orange'\n    | 'pink'\n    | 'purple'\n    | 'subtle'\n    | 'success'\n    | 'warning' = 'black'\n\n  @Input()\n  colorIsBackground: Boolean = false\n\n  @Input()\n  text = 'The quick brown fox jumps over the lazy dog'\n\n  @Input()\n  variant:\n    | 'body-extra-small'\n    | 'body-large'\n    | 'body-small'\n    | 'button'\n    | 'h1'\n    | 'h2'\n    | 'h3'\n    | 'h4'\n    | 'h5'\n    | 'h6'\n    | 'label-large'\n    | 'label-small' = 'body-large'\n\n  public get classes(): string[] {\n    return [\n      'text',\n      this.colorIsBackground ? 'text--color-is-background' : '',\n      `text--color-${this.color}`,\n      `text--variant-${this.variant}`,\n    ]\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'hb-text',\n  template: `<span [ngClass]=\"classes\">{{ text }}</span>`,\n  styleUrls: ['./index.css'],\n})\nexport class TextComponent {\n  @Input()\n  color:\n    | 'black'\n    | 'blue'\n    | 'border'\n    | 'error'\n    | 'gold'\n    | 'green'\n    | 'info'\n    | 'none'\n    | 'offwhite'\n    | 'orange'\n    | 'pink'\n    | 'purple'\n    | 'subtle'\n    | 'success'\n    | 'warning' = 'black';\n\n  @Input()\n  colorIsBackground: Boolean = false;\n\n  @Input()\n  text = 'The quick brown fox jumps over the lazy dog';\n\n  @Input()\n  variant:\n    | 'body-extra-small'\n    | 'body-large'\n    | 'body-small'\n    | 'button'\n    | 'h1'\n    | 'h2'\n    | 'h3'\n    | 'h4'\n    | 'h5'\n    | 'h6'\n    | 'label-large'\n    | 'label-small' = 'body-large';\n\n  public get classes(): string[] {\n    return [\n      'text',\n      this.colorIsBackground ? 'text--color-is-background' : '',\n      `text--color-${this.color}`,\n      `text--variant-${this.variant}`,\n    ];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -215,15 +215,74 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "NgHabaneroModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "DividerComponent"
+                        },
+                        {
+                            "name": "TextComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "DividerComponent"
+                        },
+                        {
+                            "name": "TextComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
         "variables": [
             {
+                "name": "COMPONENTS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ng-habanero/src/lib/ng-habanero.module.ts",
+                "type": "[]",
+                "defaultValue": "[\n  DividerComponent,\n  TextComponent\n]"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ng-habanero/src/test.ts",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/components/Divider/__stories__/Divider.stories.ts",
+                "file": "projects/ng-habanero/src/lib/components/Divider/__stories__/Divider.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -231,17 +290,9 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/components/Text/__stories__/Text.stories.ts",
+                "file": "projects/ng-habanero/src/lib/components/Text/__stories__/Text.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "environment",
@@ -252,32 +303,74 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
-                "name": "Template",
+                "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/components/Divider/__stories__/Divider.stories.ts",
-                "type": "Story<Divider>",
-                "defaultValue": "(args: Divider) => ({\n  component: Divider,\n  props: args,\n})"
+                "file": "src/environments/environment.prod.ts",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ng-habanero/src/test.ts",
+                "type": "literal type"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/components/Text/__stories__/Text.stories.ts",
-                "type": "Story<Text>",
-                "defaultValue": "(args: Text) => ({\n  component: Text,\n  props: args,\n})"
+                "file": "projects/ng-habanero/src/lib/components/Divider/__stories__/Divider.stories.ts",
+                "type": "Story<DividerComponent>",
+                "defaultValue": "(args: DividerComponent) => ({\n  component: DividerComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ng-habanero/src/lib/components/Text/__stories__/Text.stories.ts",
+                "type": "Story<TextComponent>",
+                "defaultValue": "(args: TextComponent) => ({\n  component: TextComponent,\n  props: args,\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/components/Divider/__stories__/Divider.stories.ts": [
+            "projects/ng-habanero/src/lib/ng-habanero.module.ts": [
+                {
+                    "name": "COMPONENTS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ng-habanero/src/lib/ng-habanero.module.ts",
+                    "type": "[]",
+                    "defaultValue": "[\n  DividerComponent,\n  TextComponent\n]"
+                }
+            ],
+            "projects/ng-habanero/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ng-habanero/src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ng-habanero/src/test.ts",
+                    "type": "literal type"
+                }
+            ],
+            "projects/ng-habanero/src/lib/components/Divider/__stories__/Divider.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/components/Divider/__stories__/Divider.stories.ts",
+                    "file": "projects/ng-habanero/src/lib/components/Divider/__stories__/Divider.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -285,17 +378,17 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/components/Divider/__stories__/Divider.stories.ts",
-                    "type": "Story<Divider>",
-                    "defaultValue": "(args: Divider) => ({\n  component: Divider,\n  props: args,\n})"
+                    "file": "projects/ng-habanero/src/lib/components/Divider/__stories__/Divider.stories.ts",
+                    "type": "Story<DividerComponent>",
+                    "defaultValue": "(args: DividerComponent) => ({\n  component: DividerComponent,\n  props: args,\n})"
                 }
             ],
-            "src/components/Text/__stories__/Text.stories.ts": [
+            "projects/ng-habanero/src/lib/components/Text/__stories__/Text.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/components/Text/__stories__/Text.stories.ts",
+                    "file": "projects/ng-habanero/src/lib/components/Text/__stories__/Text.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -303,19 +396,9 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/components/Text/__stories__/Text.stories.ts",
-                    "type": "Story<Text>",
-                    "defaultValue": "(args: Text) => ({\n  component: Text,\n  props: args,\n})"
-                }
-            ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
+                    "file": "projects/ng-habanero/src/lib/components/Text/__stories__/Text.stories.ts",
+                    "type": "Story<TextComponent>",
+                    "defaultValue": "(args: TextComponent) => ({\n  component: TextComponent,\n  props: args,\n})"
                 }
             ],
             "src/environments/environment.ts": [
@@ -326,6 +409,16 @@
                     "file": "src/environments/environment.ts",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
                 }
             ]
         },
@@ -339,16 +432,7 @@
         "status": "low",
         "files": [
             {
-                "filePath": "src/app/app.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "AppComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
-                "status": "low"
-            },
-            {
-                "filePath": "src/components/Divider/__stories__/Divider.stories.ts",
+                "filePath": "projects/ng-habanero/src/lib/components/Divider/__stories__/Divider.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -358,7 +442,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/components/Divider/__stories__/Divider.stories.ts",
+                "filePath": "projects/ng-habanero/src/lib/components/Divider/__stories__/Divider.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -368,7 +452,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/components/Divider/index.component.ts",
+                "filePath": "projects/ng-habanero/src/lib/components/Divider/index.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "DividerComponent",
@@ -377,7 +461,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/components/Text/__stories__/Text.stories.ts",
+                "filePath": "projects/ng-habanero/src/lib/components/Text/__stories__/Text.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -387,7 +471,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/components/Text/__stories__/Text.stories.ts",
+                "filePath": "projects/ng-habanero/src/lib/components/Text/__stories__/Text.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -397,12 +481,51 @@
                 "status": "low"
             },
             {
-                "filePath": "src/components/Text/index.component.ts",
+                "filePath": "projects/ng-habanero/src/lib/components/Text/index.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "TextComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ng-habanero/src/lib/ng-habanero.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "COMPONENTS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ng-habanero/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ng-habanero/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {

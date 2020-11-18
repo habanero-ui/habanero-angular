@@ -1,1 +1,0 @@
-export default ['thin', 'regular']
